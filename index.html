@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body style = "background-color: lightgreen">
+  <div id ="scene1" style = "display: block">
+<img src = "https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcTlFppQFm4VCK-UlCGwBXMWBW1BSM0v_KDxVwXZgEO-4slA_Bq23-4OUg_Lg2ONXc2D" width = "100" id ="monke" onclick = "oneup()">
+  <img src = "https://e1.pxfuel.com/desktop-wallpaper/375/856/desktop-wallpaper-ugly-monkey.jpg" width = "100" id = "ugly">
+  <h1 id ="1">7</h1>
+  <audio id = "rizz" src = "https://memes.co.in/sound-buttons/wp-content/uploads/2023/01/rizz-sounds.mp3
+"> </audio>
+  <h3 id = "2">Rizz: 0</h3>
+    <h3 id = "3">Fans: 0</h3>
+    <h3 id = "4">Money: 0</h3>
+  <h3 id = "5">Women: 0</h3>
+    <button onclick = "scene()">Date</button>
+    <button onclick = "work()">Work</button>
+     <button style ="display: none;" onclick = "videoyt()" id = "yt">Make Youtube Video</button>
+    <hr>
+    <button onclick = "yt()">Buy Youtube Channel 10$</button>
+  </div>
+    <div id = "scene2" style ="display: none;">
+      <img id = "ugly2"></img>
+    <img src = "https://st2.depositphotos.com/1036149/6242/i/950/depositphotos_62426565-stock-photo-fun-female-monkey-and-phone.jpg" width = "100">
+  <button onclick = "scene()">back</button>
+  </div>
+  <div id = "scene3" style ="display: none;">
+    <h1>Monke Co.</h1>
+    <img onclick = "collect" src = "https://i.etsystatic.com/5986811/r/il/b35177/427015287/il_1588xN.427015287_cn1e.jpg" width = "100">
+    <h1 id = "haha" style ="display: block;">Too Ugly too work here</h1>
+      <img style ="display: none;" id= "banana"  src = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/1280px-Banana-Single.jpg" width = "100" onclick= "collect()"  >
+     <button onclick = "scene()">back</button>
+    </img>
+  <br>
+  
+  </div>
+  </body>
+  <script>
+    let women = 0;
+    let money = 1;
+    let fans = 0;
+    let rizzlevel = 9;
+    document.getElementById("2").innerHTML = "Rizz: " + rizzlevel;
+    
+ let t=1; document.getElementById("1").innerHTML = t;
+
+  function oneup() {
+ 
+    t += 1;
+   
+    document.getElementById("1").innerHTML = t;
+    if (t % 100 === 0) {
+     fans ++; document.getElementById("3").innerHTML = "Fans: " + fans;
+    }
+   if (t % 10 === 0){document.getElementById("rizz").play()
+     rizzlevel ++;               document.getElementById("2").innerHTML = "Rizz: " + rizzlevel;
+                     document.getElementById("monke").src = "https://i.ibb.co/YjKkCMp/IMG-7393.png";
+                     setTimeout(ok,500)
+                     if (t === 100){
+      document.getElementById("ugly").width = "250";
+                     document.getElementById("ugly").src = "https://wallpapers.com/images/featured-full/ugly-monkey-pictures-whlavcnlxqz21b87.jpg";
+                     }  if (rizzlevel === 20) {
+                       document.getElementById("ugly").width = "100";
+                     document.getElementById("ugly").src = "https://akns-images.eonline.com/eol_images/Entire_Site/2015823/rs_634x826-150923100450-634-monkey.jpg";
+                     } if (rizzlevel === 30){
+         document.getElementById("ugly").src = "https://media.apenheul.nl/aphl-cache/e/f/8/a/b/9/ef8ab93501cf7fa06d678e61b635c083d60a1fd2.jpg";                             
+                     }
+  }
+function ok() {
+   document.getElementById("monke").src = "https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcTlFppQFm4VCK-UlCGwBXMWBW1BSM0v_KDxVwXZgEO-4slA_Bq23-4OUg_Lg2ONXc2D";                   
+                     }
+       
+    
+      
+  }
+  
+  function scene() {
+       document.getElementById("ugly2").src = document.getElementById("ugly").src
+    document.getElementById("ugly2").width = document.getElementById("ugly").width
+    var scene3 = document.getElementById("scene3");
+    var scene2 = document.getElementById("scene2");
+    var scene1 = document.getElementById("scene1");
+    if (scene1.style.display === "none"){
+      scene1.style.display = "block"
+      scene2.style.display = "none"
+         scene3.style.display = "none"
+    }else{
+         scene3.style.display = "none"
+      scene2.style.display = "block"
+      scene1.style.display = "none"
+      var datechance = Math.floor(Math.random() * (10000 - rizzlevel + 1)) + rizzlevel;
+      if (datechance >= 10000 && datechance <= 10000 ){
+        console.log("date yes")
+        women ++;
+        document.getElementById("5").innerHTML = "Women: " + women;
+      }else{
+        console.log("date no")}
+    }
+      
+      
+}
+   function work() {
+     scene3.style.display = "block"
+     scene2.style.display = "none"
+     scene1.style.display = "none"
+     if (scene2.style.display === "block"){
+      scene1.style.display = "none"
+      scene2.style.display = "none"
+    }
+     if (rizzlevel >= 10){
+   document.getElementById("haha").style.display = "none" 
+       document.getElementById("banana").style.display = "block"
+     }
+   }
+    function collect() {
+      money += 1;
+      document.getElementById("2").innerHTML = "Money: " + money;
+     var banana = document.getElementById("banana");
+     banana.style.display = "none"
+      if (  banana.style.display === "none"){
+        setTimeout(regen,500)
+      }
+   }
+    function regen(){
+      banana.style.display = "block"
+    }
+   let youtube = document.getElementById("yt");
+    function yt() {
+      if (money >= 10){
+      youtube.remove();
+         console.log("works")
+        money -= 10;
+       
+        document.getElementById("2").innerHTML = "Money: " + money;
+      }
+    }
+  </script>
+</html>
+
